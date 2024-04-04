@@ -4,8 +4,19 @@ export interface IProject {
     title: string;
     technologies: string[];
     imageSrc: string;
-    githubLink: string;
-    deployLink: string;
+    links: {
+      label: string;
+      url: string;
+      color: string;
+    }[];
+    details: {
+      label: string;
+      value: string;
+    }
+    outcome: {
+      label: string;
+      value: string;
+    }
   }
   
   export interface ISkill {
