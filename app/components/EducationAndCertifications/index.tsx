@@ -2,10 +2,10 @@
 import { IEducation } from '@/app/types';
 import React from 'react';
 
-const EducationAndCertifications: React.FC<{ education: IEducation[] }> = ({ education }) => {
+const EducationAndCertifications: React.FC<{ education: IEducation[], label: string }> = ({ education, label }) => {
   return (
     <div className="bg-white p-4 shadow-lg rounded-lg">
-      <h3 className="font-bold text-xl mb-4">Educação e Certificações</h3>
+      <h3 className="font-bold text-xl mb-4">{label}</h3>
       {education.map((edu, index) => (
         <div key={index} className="mb-4">
           <h4 className="font-semibold">{edu.degree} - {edu.institution}</h4>

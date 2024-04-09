@@ -1,5 +1,5 @@
 // PortfolioData.tsx
-import { IProject, ISkill, IExperience, IEducation, IProfile } from '../types';
+import { IProject, ISkill, IExperience, IEducation, IProfile, ILabels } from '../types';
 
 const profilePT_BR: IProfile = {
   name: 'Marcel Brasileiro Leão',
@@ -389,6 +389,22 @@ const educationEN: IEducation[] = [
   },
 ];
 
+const labelsPT_BR: ILabels ={
+  about: 'Sobre',
+  habilities: 'Habilidades',
+  education: 'Formação Acadêmica',
+  experience: 'Experiência',
+  Projects: 'Projetos',
+}
+
+const labelsEN: ILabels ={
+  about: 'About',
+  habilities: 'Skills',
+  education: 'Education',
+  experience: 'Experience',
+  Projects: 'Projects',
+}
+
 const portfolioData = {
   pt_BR: {
     profile: profilePT_BR,
@@ -396,6 +412,7 @@ const portfolioData = {
     skills: skillsPT_BR,
     experiences: experiencesPT_BR,
     education: educationPT_BR,
+    labels: labelsPT_BR,
   },
   en: {
     profile: profileEN,
@@ -403,6 +420,7 @@ const portfolioData = {
     skills: skillsEN,
     experiences: experiencesEN,
     education: educationEN,
+    labels: labelsEN,
   },
 };
 

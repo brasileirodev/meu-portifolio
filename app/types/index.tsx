@@ -50,3 +50,10 @@ export interface IProject {
     strengths: string[];
   }
   
+  export interface ILabels {
+    about: string;
+    habilities: string;
+    Projects: string;
+    experience: string;
+    education: string;
+  }

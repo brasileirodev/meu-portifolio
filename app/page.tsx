@@ -26,7 +26,7 @@ const Portfolio: React.FC = () => {
     return <div>Selected language not found.</div>;
   }
 
-  const { profile: currentProfile, projects: currentProjects, skills: currentSkills, experiences: currentExperiences, education: currentEducation } = currentLanguageData;
+  const { profile: currentProfile, projects: currentProjects, skills: currentSkills, experiences: currentExperiences, education: currentEducation, labels } = currentLanguageData;
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -45,19 +45,19 @@ const Portfolio: React.FC = () => {
 
       <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-wrap -mx-4">
-          <ProfileArticle profile={currentProfile} />
+          <ProfileArticle profile={currentProfile} label={labels.about}/>
           <div className="w-full px-4">
-            <SkillSet skills={currentSkills} />
+            <SkillSet skills={currentSkills} label={labels.habilities}/>
             <section className="mb-12">
-              <h2 className="text-3xl font-bold my-4">Projects</h2>
+              <h2 className="text-3xl font-bold my-4">{labels.Projects}</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {currentProjects.map((project) => (
                   <ProjectCard key={project.title} {...project} />
                 ))}
               </div>
             </section>
-            <ProfessionalExperience experiences={currentExperiences} />
-            <EducationAndCertifications education={currentEducation} />
+            <ProfessionalExperience experiences={currentExperiences} label={labels.experience}/>
+            <EducationAndCertifications education={currentEducation} label={labels.education}/>
           </div>
         </div>
       </main>
